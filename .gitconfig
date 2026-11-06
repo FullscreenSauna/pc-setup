@@ -9,8 +9,6 @@
 	last = log -1 HEAD --stat
 
 
-	adds = !git add . && git restore 'NETGEN/EGenSettings/EGenSettings/Settings/EGen.settings*' --staged && git restore 'NETGEN/WebAtlas.Web/Web.Config*' --staged
-	addf = !git add . && git restore 'server/WebAtlas.Server.Run/appsettings.Default-Protected.json*' --staged && git restore 'server/WebAtlas.Server.Run/WebAtlas.Server.Run.csproj' --staged
 	unstage = !git restore . -S
 
 	update-remotes = !git remote update origin --prune
