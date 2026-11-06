@@ -1,0 +1,26 @@
+[core]
+	editor = code
+[alias]
+    st = status
+    ch = checkout
+	br = branch
+	pl = pull
+	cm = commit -m
+	last = log -1 HEAD --stat
+
+
+	adds = !git add . && git restore 'NETGEN/EGenSettings/EGenSettings/Settings/EGen.settings*' --staged && git restore 'NETGEN/WebAtlas.Web/Web.Config*' --staged
+	addf = !git add . && git restore 'server/WebAtlas.Server.Run/appsettings.Default-Protected.json*' --staged && git restore 'server/WebAtlas.Server.Run/WebAtlas.Server.Run.csproj' --staged
+	unstage = !git restore . -S
+
+	update-remotes = !git remote update origin --prune
+
+	merge-main = "!f() { BRANCH=`git symbolic-ref --short HEAD` git stash -u; git checkout master; git pull; git checkout $BRANCH; git merge origin master;}; f"
+	merge-custom = "!f() { BRANCH=`git symbolic-ref --short HEAD`; git stash -u; git checkout ${1}; git pull; git checkout $BRANCH; git merge ${1}; }; f"
+
+	commits = !git log origin/master..HEAD
+	uncommit = !git reset HEAD~1S
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+[credential]
+	helper = 
+	helper = C:/Users/admin/AppData/Local/Programs/Git\\ Credential\\ Manager/git-credential-manager.exe
