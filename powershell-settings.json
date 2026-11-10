@@ -1,7 +1,6 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
-    "actions":
-    [
+    "actions": [
         {
             "command": "toggleFocusMode",
             "id": "User.toggleFocusMode"
@@ -12,8 +11,7 @@
     "copyOnSelect": true,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "disableAnimations": true,
-    "keybindings":
-    [
+    "keybindings": [
         {
             "id": "Terminal.ToggleFullscreen",
             "keys": "f12"
@@ -47,28 +45,23 @@
             "keys": "alt+enter"
         }
     ],
-    "newTabMenu":
-    [
+    "newTabMenu": [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles":
-    {
-        "defaults":
-        {
+    "profiles": {
+        "defaults": {
             "colorScheme": "Dracula",
-            "font":
-            {
+            "font": {
                 "face": "CaskaydiaCove NF",
                 "size": 11,
                 "weight": "normal"
             }
         },
-        "list":
-        [
+        "list": [
             {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -nologo",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
@@ -98,6 +91,7 @@
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
+                "commandline": "pwsh -nologo",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
@@ -105,8 +99,7 @@
             }
         ]
     },
-    "schemes":
-    [
+    "schemes": [
         {
             "background": "#282A36",
             "black": "#21222C",
